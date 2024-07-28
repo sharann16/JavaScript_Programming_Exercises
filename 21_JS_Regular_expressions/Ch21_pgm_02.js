@@ -1,44 +1,31 @@
-// Write a function called tenMostFrequentWords which get the ten most frequent word from a string?
-
-paragraph = `I love teaching. If you do not love teaching what else can you love. I love Python if you do not love something which can give you all the capabilities to develop an application what else can you love.`
-console.log(tenMostFrequentWords(paragraph))
-
-[
-    {word:'love', count:6},
-    {word:'you', count:5},
-    {word:'can', count:3},
-    {word:'what', count:2},
-    {word:'teaching', count:2},
-    {word:'not', count:2},
-    {word:'else', count:2},
-    {word:'do', count:2},
-    {word:'I', count:2},
-    {word:'which', count:1},
-    {word:'to', count:1},
-    {word:'the', count:1},
-    {word:'something', count:1},
-    {word:'if', count:1},
-    {word:'give', count:1},
-    {word:'develop',count:1},
-    {word:'capabilities',count:1},
-    {word:'application', count:1},
-    {word:'an',count:1},
-    {word:'all',count:1},
-    {word:'Python',count:1},
-    {word:'If',count:1}
-]
-
-
-console.log(tenMostFrequentWords(paragraph, 10))
-
-[{word:'love', count:6},
-    {word:'you', count:5},
-    {word:'can', count:3},
-    {word:'what', count:2},
-    {word:'teaching', count:2},
-    {word:'not', count:2},
-    {word:'else', count:2},
-    {word:'do', count:2},
-    {word:'I', count:2},
-    {word:'which', count:1}
-    ]
+function tenMostFrequentWords(paragraph, topN = 10) {
+    // Normalize the text: Convert to lowercase and remove punctuation
+    const normalizedParagraph = paragraph.toLowerCase().replace(/[^\w\s]/g, '');
+    
+    // Split the text into words
+    const words = normalizedParagraph.split(/\s+/);
+    
+    // Count the frequency of each word
+    const wordCount = words.reduce((countMap, word) => {
+      if (word) {
+        countMap[word] = (countMap[word] || 0) + 1;
+      }
+      return countMap;
+    }, {});
+    
+    // Convert the count map to an array of objects with word and count
+    const wordArray = Object.entries(wordCount).map(([word, count]) => ({ word, count }));
+    
+    // Sort by count in descending order and get the top N words
+    const sortedWords = wordArray.sort((a, b) => b.count - a.count).slice(0, topN);
+    
+    return sortedWords;
+  }
+  
+  // Test data
+  const paragraph = `I love teaching. If you do not love teaching what else can you love. I love Python if you do not love something which can give you all the capabilities to develop an application what else can you love.`;
+  
+  // Testing the function
+  console.log(tenMostFrequentWords(paragraph));
+  console.log(tenMostFrequentWords(paragraph, 10));
+  

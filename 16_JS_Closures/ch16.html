@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Closures Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      padding: 20px;
+    }
+    .example {
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Closures Example</h1>
+  <div class="example" id="level1">
+    <h2>Level 1: Single Inner Function</h2>
+    <button onclick="executeLevel1()">Execute Level 1</button>
+    <p id="level1-output"></p>
+  </div>
+  <div class="example" id="level2">
+    <h2>Level 2: Three Inner Functions</h2>
+    <button onclick="executeLevel2()">Increment</button>
+    <button onclick="executeLevel2Decrement()">Decrement</button>
+    <button onclick="executeLevel2Reset()">Reset</button>
+    <p id="level2-output"></p>
+  </div>
+  <div class="example" id="level3">
+    <h2>Level 3: personAccount</h2>
+    <button onclick="addIncome()">Add Income</button>
+    <button onclick="addExpense()">Add Expense</button>
+    <button onclick="showAccountInfo()">Show Account Info</button>
+    <p id="level3-output"></p>
+  </div>
+
+  <script src="./Ch16_pgm_01.js"></script>
+</body>
+</html>
