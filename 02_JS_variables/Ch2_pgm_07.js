@@ -5,8 +5,6 @@ var locationName = "The Dungeon of Doom";
 
 console.log(playerName + " is in " + locationName);
 
-
-
 /* Further Adventures
  *
  * 1) Declare a health variable and assign it
@@ -22,3 +20,15 @@ console.log(playerName + " is in " + locationName);
  *    with a new one to display the message variable.
  *
  */
+
+// 1) Declare a health variable and assign it a value in one step
+var health = 50;
+
+// 2) Declare a message variable
+var message;
+
+// 3) Assign message a value created by joining variables and text
+message = playerName + " has health " + health + " and is in " + locationName;
+
+// 4) Replace the current console.log statement with a new one to display the message variable
+console.log(message);

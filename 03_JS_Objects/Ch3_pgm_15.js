@@ -13,9 +13,6 @@ console.log(player.name);
 console.log(player.name + " is in " + player.place);
 console.log(player.name + " has health " + player.health);
 console.log("Items: " + player.items);
-
-
-
 /* Further Adventures
  *
  * 1) Create a second player.
@@ -31,3 +28,17 @@ console.log("Items: " + player.items);
  * of items called an array. See Chapter 8.
  *
  */
+
+// 1) Creating a second player
+var player2 = {
+    name: "Astrid",
+    health: 70,
+    place: "The Tower of Enchantment",
+    items: "a magic wand, a spellbook, a potion of healing"
+};
+
+// 2) Logging their details to the console
+console.log(player2.name);
+console.log(player2.name + " is in " + player2.place);
+console.log(player2.name + " has health " + player2.health);
+console.log("Items: " + player2.items);

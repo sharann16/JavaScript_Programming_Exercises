@@ -11,14 +11,17 @@ response = getMessage();
 
 console.log(response);
 
-
-
 /* Further Adventures
  *
  * 1) Write a getMyMessage function
  *    that returns a message of
  *    your choosing.
- *
+ */
+var getMyMessage = function () {
+    return "Coding is fun!";
+};
+
+/*
  * We can call functions at the console prompt.
  * Run the program, then click in the Console panel
  * and enter commands after the prompt, >
@@ -29,7 +32,10 @@ console.log(response);
  *
  * When a function is called at the prompt,
  * its return value is displayed.
- *
- * 3) Call getMyMessage at the prompt.
- *
  */
+getMessage();
+
+/*
+ * 3) Call getMyMessage at the prompt.
+ */
+getMyMessage();

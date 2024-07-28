@@ -12,8 +12,6 @@ player1.attempted = 1;
 player1.correct = 1;
 player1.score = 50;
 
-
-
 /* Further Adventures
  *
  * 1) Run the program and then
@@ -26,3 +24,5 @@ player1.score = 50;
  * 3) Update other properties using the console.
  *
  */
+
+// Instructions are intended to be executed interactively in the console

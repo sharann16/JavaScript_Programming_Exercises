@@ -4,7 +4,6 @@ var book;
 
 book = {};
 
-
 /* Further Adventures
  *
  * 1) Log book to the console.
@@ -20,3 +19,15 @@ book = {};
  *    to the outcome.
  *
  */
+
+// 1) Log book to the console
+console.log(book);
+
+// 2) Place your cursor between the curly braces and press enter to add empty lines
+// Example:
+// book = {
+//   
+// };
+
+// 3) Run the program again, logging book to the console
+console.log(book);

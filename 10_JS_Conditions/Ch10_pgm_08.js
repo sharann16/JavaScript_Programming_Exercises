@@ -250,3 +250,12 @@ var getGame = function () {
    *    getting items when there are none.
    *
    */
+  var game = getGame();
+
+// Example interactions with the game
+console.log(game.go("south")); // Move south to the library
+console.log(game.get());       // Pick up an item from the current location
+console.log(game.go("north")); // Move north back to the kitchen
+console.log(game.go("west"));  // Move west to the garden
+console.log(game.get());       // Try to get an item in the garden (if any)
+console.log(game.go("north")); // Try to go in a non-existent direction (north from the garden)

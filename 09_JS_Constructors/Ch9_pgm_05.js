@@ -1,4 +1,4 @@
-// Including a moons array in our Planet constructor
+// Planet constructor with moons array and methods
 
 var Planet = function (name, position, type) {
     this.name = name;
@@ -16,29 +16,32 @@ var Planet = function (name, position, type) {
     this.addMoon = function (moon) {
         this.moons.push(moon);
     };
+
+    this.removeMoon = function () {
+        if (this.moons.length > 0) {
+            return this.moons.pop(); // Remove and return the last moon
+        } else {
+            console.log("No moons to remove.");
+        }
+    };
 };
 
-var planet = new Planet( "Jupiter", 5, "Gas Giant" );
+// Creating a new planet instance and adding moons
+var planet1 = new Planet( "Jupiter", 5, "Gas Giant" );
+planet1.addMoon("Io");
+planet1.addMoon("Europa");
 
-planet.addMoon("Io");
-planet.addMoon("Europa");
+planet1.showPlanet(); // Display planet info with moons
 
-planet.showPlanet();
+// Creating a second planet instance and adding moons
+var planet2 = new Planet( "Saturn", 6, "Gas Giant" );
+planet2.addMoon("Titan");
+planet2.addMoon("Rhea");
+planet2.addMoon("Enceladus");
 
+planet2.showPlanet(); // Display planet info with moons
 
+// Testing removeMoon method
+planet2.removeMoon(); // Remove the last moon "Enceladus"
+planet2.showPlanet(); // Display updated planet info with moons
 
-/* Further Adventures
- *
- * 1) Create a second planet.
- *    Make one up if you like.
- *
- * 2) Add three moons to the second planet.
- *
- * 3) Call the showPlanet method
- *    on the second planet.
- *
- * 4) Add a removeMoon method
- *    that removes the last moon
- *    from the moons array.
- *
- */

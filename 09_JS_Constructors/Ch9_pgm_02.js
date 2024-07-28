@@ -25,14 +25,17 @@ var planet1 = buildPlanet(
 
 planet1.showPlanet();
 
+// Further Adventures
 
+// 1) Create a second planet.
+//    Use the buildPlanet function.
 
-/* Further Adventures
- *
- * 1) Create a second planet.
- *    Use the buildPlanet function.
- *
- * 2) Call the showPlanet method on your
- *    new planet.
- *
- */
+var planet2 = buildPlanet(
+    "Mars",
+    4,
+    "Terrestrial"
+);
+
+// 2) Call the showPlanet method on your
+//    new planet.
+planet2.showPlanet();

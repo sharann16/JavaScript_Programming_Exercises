@@ -41,9 +41,6 @@ var player2 = {
 showPlayerInfo(player1.name, player1.place, player1.health);
 showPlayerInfo(player2.name, player2.place, player2.health);
 
-
-
-
 /* Further Adventures
  *
  * 1) Define a showLine function with a parameter
@@ -52,24 +49,49 @@ showPlayerInfo(player2.name, player2.place, player2.health);
  *    -----
  *    showLine(20) should output
  *    --------------------
- *
- *    Hints:
- *    a) In the function body declare a line variable
- *       and assign it a long string of dashes.
- *    b) Use the substring function to grab
- *       a line of the correct length.
- *       line.substring(0, 10) would have length 10.
- *
+ */
+var showLine = function (length) {
+    var line = "";
+    for (var i = 0; i < length; i++) {
+        line += "-";
+    }
+    console.log(line);
+};
+
+/*
  * 2) Use your showLine function to display the
  *    player's name in a box.
  *    ----------
  *    - Kandra -
  *    __________
- *
+ */
+var showBoxedPlayerName = function (playerName) {
+    showLine(playerName.length + 4);
+    console.log("- " + playerName + " -");
+    showLine(playerName.length + 4);
+};
+
+showBoxedPlayerName(player1.name);
+
+/*
  * 3) Update your showLine function to use
  *    asterisks rather than dashes.
  *    **********
  *    * Kandra *
  *    **********
- *
  */
+var showAsteriskLine = function (length) {
+    var line = "";
+    for (var i = 0; i < length; i++) {
+        line += "*";
+    }
+    console.log(line);
+};
+
+var showBoxedPlayerNameAsterisks = function (playerName) {
+    showAsteriskLine(playerName.length + 4);
+    console.log("* " + playerName + " *");
+    showAsteriskLine(playerName.length + 4);
+};
+
+showBoxedPlayerNameAsterisks(player2.name);

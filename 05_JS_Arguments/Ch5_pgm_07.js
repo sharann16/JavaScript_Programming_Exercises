@@ -1,27 +1,18 @@
-// Displaying a player's name
-
-var showPlayerName;
-
-showPlayerName = function (playerName) {
-    console.log(playerName);
+// Function to display a player's name
+var showPlayerName = function(playerName) {
+    console.log("The player's name is " + playerName);
 };
 
-showPlayerName("Kandra");
-showPlayerName("Dax");
+// Testing showPlayerName function
+showPlayerName("Kandra");  // Output: The player's name is Kandra
+showPlayerName("Dax");     // Output: The player's name is Dax
 
+// Function to display the number of letters in the player's name
+var showNameLength = function(playerName) {
+    var length = playerName.length;
+    console.log("The player's name has " + length + " letters");
+};
 
-
-/* Further Adventures
- *
- * 1) Update the text logged so that it is
- *    of the form:
- *    The player's name is Kandra
- *
- * Strings have a length property that gives
- * the number of characters in the string.
- * e.g. playerName.length.
- *
- * 2) Make the function show the number
- *    of letters in the player's name.
- *
- */
+// Testing showNameLength function
+showNameLength("Kandra");  // Output: The player's name has 6 letters
+showNameLength("Dax");     // Output: The player's name has 3 letters

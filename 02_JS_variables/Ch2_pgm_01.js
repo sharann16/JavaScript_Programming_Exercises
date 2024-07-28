@@ -1,6 +1,6 @@
 // Declaring a variable
 
-var score;
+var score
 
 /* Further Adventures
  *
@@ -14,3 +14,6 @@ var score;
  * 3) Declare two more variables.
  *
  */
+var score;
+var playerName;
+var level;

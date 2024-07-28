@@ -10,8 +10,6 @@ console.log("New score: " + score);
 
 console.log("Way to go!");
 
-
-
 /* Further Adventures
  *
  * The player splats a kumquat.
@@ -26,3 +24,8 @@ console.log("Way to go!");
  * 4) Display a message of congratulations
  *
  */
+
+console.log("Successful kumquat splat!");
+score = score + 100;
+console.log("New score after splat: " + score);
+console.log("Congratulations on your splat achievement!");

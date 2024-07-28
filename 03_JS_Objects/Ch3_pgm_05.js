@@ -3,10 +3,8 @@
 var book;
 
 book = {
-    title : "The Hobbit"
+    title: "The Hobbit"
 };
-
-
 
 /* Further Adventures
  *
@@ -22,3 +20,14 @@ book = {
  *    The book object should be displayed.
  *
  */
+
+// 1) Log book to the console
+console.log(book);
+
+// 2) Create a second book
+var book2 = {
+    title: "To Kill a Mockingbird"
+};
+
+// 3) Log book2 to the console
+console.log(book2);

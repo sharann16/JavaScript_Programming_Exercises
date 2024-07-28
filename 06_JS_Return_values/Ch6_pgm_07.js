@@ -3,12 +3,10 @@
 var getPlayerName;
 
 getPlayerName = function (playerName) {
-    return playerName;
+    return "==== " + playerName + " ====";
 };
 
 console.log(getPlayerName("Kandra"));
-
-
 
 /* Further Adventures
  *
@@ -45,3 +43,13 @@ console.log(getPlayerName("Kandra"));
  * "
  *
  */
+
+// Updated getPlayerName function with prefix and suffix:
+
+getPlayerName = function (playerName) {
+    var border = "|\n";
+    var line = "==== " + playerName + " ====";
+    return border + line + "\n" + border;
+};
+
+console.log(getPlayerName("Jahver")); 

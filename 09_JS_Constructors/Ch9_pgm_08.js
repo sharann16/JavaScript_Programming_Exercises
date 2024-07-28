@@ -1,5 +1,3 @@
-// A calendar event constructor
-
 var CalendarEvent = function (title, startDate, startTime, endTime) {
     this.title = title;
     this.startDate = startDate;
@@ -7,39 +5,26 @@ var CalendarEvent = function (title, startDate, startTime, endTime) {
     this.endTime = endTime;
   
     this.showEvent = function () {
-        var dateString = [
-            this.startDate,
-            ", from ",
-            this.startTime,
-            " to ",
-            this.endTime
-        ].join("");
+        var timeString = "(" + this.startTime + " - " + this.endTime + ")";
       
-        console.log(this.title);
-        console.log(dateString);
+        console.log(this.title + ": " + this.startDate + " - " + timeString);
     };
 };
 
-var calEvent = new CalendarEvent(
+var calEvent1 = new CalendarEvent(
     "Annual Review",
     "3/5/16",
     "4.00pm",
     "5.00pm"
 );
 
-calEvent.showEvent();
+calEvent1.showEvent();
 
+var calEvent2 = new CalendarEvent(
+    "Team Meeting",
+    "3/6/16",
+    "10.00am",
+    "11.00am"
+);
 
-
-/* Further Adventures
- *
- * 1) Add a second event.
- *
- * 2) Call the showEvent method on your
- *    new calendar event.
- *
- * 3) Update the showEvent method so that
- *    its output looks like this:
- *    Annual Review: 3/5/16 - (4.00pm - 5.00pm)
- *
- */
+calEvent2.showEvent();

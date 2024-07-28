@@ -1,60 +1,33 @@
-// Using the same function with multiple objects
-
-var movie1;
-var movie2;
-var movie3;
-var movie;
-var showMovieInfo;
-
-movie1 = {
-    title: "Inside Out",
-    actors: "Amy Poehler, Bill Hader",
-    directors: "Pete Doctor, Ronaldo Del Carmen"
+// Creating quiz question objects
+var question1 = {
+    question: "What is the capital of France?",
+    options: ["Bordeaux", "F", "Paris", "Brussels"],
+    correctAnswer: "Paris"
 };
 
-movie2 = {
-    title: "Spectre",
-    actors: "Daniel Craig, Christoph Waltz",
-    directors: "Sam Mendes"
+var question2 = {
+    question: "Who is the author of 'To Kill a Mockingbird'?",
+    options: ["Harper Lee", "J.K. Rowling", "Jane Austen", "Charles Dickens"],
+    correctAnswer: "Harper Lee"
 };
 
-movie3 = {
-    title: "Star Wars: Episode VII - The Force Awakens",
-    actors: "Harrison Ford, Mark Hamill, Carrie Fisher",
-    directors: "J.J.Abrams"
+var question3 = {
+    question: "Which planet is known as the Red Planet?",
+    options: ["Venus", "Mars", "Jupiter", "Saturn"],
+    correctAnswer: "Mars"
 };
 
-showMovieInfo = function () {
-    console.log("Movie information for " + movie.title);
+// Function to display question and options
+var showQuestion = function (questionObj) {
+    console.log(questionObj.question);
     console.log("------------------------------");
-    console.log("Actors: " + movie.actors);
-    console.log("Directors: " + movie.directors);
+    for (var i = 0; i < questionObj.options.length; i++) {
+        console.log("(" + (i + 1) + ") " + questionObj.options[i]);
+    }
     console.log("------------------------------");
 };
 
-movie = movie1;
-showMovieInfo();
-
-movie = movie2;
-showMovieInfo();
-
-movie = movie3;
-showMovieInfo();
-
-
-
-/* Further Adventures
- *
- * 1) Create an object to represent
- *    a multiple choice quiz question.
- *
- * 2) Create two more quiz question objects.
- *
- * 3) Create a function to show
- *    the question and answer options.
- *
- * 4) Use the same variable assignment technique
- *    as above to display all three questions
- *    on the console.
- *
- */
+// Displaying all three quiz questions
+showQuestion(question1);
+showQuestion(question2);
+showQuestion(question3);

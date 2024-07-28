@@ -3,8 +3,8 @@
 var player1;
 
 player1 = {
-	  name: "Max",
-	  score: 0
+    name: "Max",
+    score: 0
 };
 
 console.log(player1.name + " has scored " + player1.score);
@@ -12,8 +12,6 @@ console.log(player1.name + " has scored " + player1.score);
 player1.score = player1.score + 50;
 
 console.log(player1.name + " has scored " + player1.score);
-
-
 
 /* Further Adventures
  *
@@ -27,3 +25,16 @@ console.log(player1.name + " has scored " + player1.score);
  *    their names.
  *
  */
+
+// 1) Increasing player1's score by 10%
+player1.score = player1.score * 1.1;
+
+// 2) Adding a second player
+var player2 = {
+    name: "Alice",
+    score: 100
+};
+
+// 3) Calculating and logging the sum of players' scores
+var totalScore = player1.score + player2.score;
+console.log(player1.name + " and " + player2.name + " have a total score of " + totalScore);

@@ -3,6 +3,7 @@
 var movie1;
 var movie2;
 var movie3;
+var movie4;
 
 movie1 = {
   title: "Inside Out",
@@ -20,6 +21,12 @@ movie3 = {
   title: "Star Wars: Episode VII - The Force Awakens",
   actors: "Harrison Ford, Mark Hamill, Carrie Fisher",
   directors: "J.J.Abrams"
+};
+
+movie4 = {
+  title: "Inception",
+  actors: "Leonardo DiCaprio, Joseph Gordon-Levitt, Ellen Page",
+  directors: "Christopher Nolan"
 };
 
 console.log("Movie information for " + movie1.title);
@@ -40,7 +47,11 @@ console.log("Actors: " + movie3.actors);
 console.log("Directors: " + movie3.directors);
 console.log("------------------------------");
 
-
+console.log("Movie information for " + movie4.title);
+console.log("------------------------------");
+console.log("Actors: " + movie4.actors);
+console.log("Directors: " + movie4.directors);
+console.log("------------------------------");
 
 /* Further Adventures
  *
@@ -54,3 +65,44 @@ console.log("------------------------------");
  * 4) Display info from the three events on the console.
  *
  */
+
+// 1) Adding a fourth movie
+// Already added movie4 above
+
+// 2) Adding space between movies
+console.log("\n"); // Adding a blank line between movies for better readability
+
+// 3) Creating objects for calendar events
+var event1 = {
+  name: "Conference on AI",
+  date: "2024-08-10",
+  location: "San Francisco"
+};
+
+var event2 = {
+  name: "Web Development Workshop",
+  date: "2024-09-15",
+  location: "New York City"
+};
+
+var event3 = {
+  name: "Design Thinking Seminar",
+  date: "2024-07-30",
+  location: "Chicago"
+};
+
+// 4) Displaying info from the three events
+console.log("Event: " + event1.name);
+console.log("Date: " + event1.date);
+console.log("Location: " + event1.location);
+console.log("------------------------------");
+
+console.log("Event: " + event2.name);
+console.log("Date: " + event2.date);
+console.log("Location: " + event2.location);
+console.log("------------------------------");
+
+console.log("Event: " + event3.name);
+console.log("Date: " + event3.date);
+console.log("Location: " + event3.location);
+console.log("------------------------------");

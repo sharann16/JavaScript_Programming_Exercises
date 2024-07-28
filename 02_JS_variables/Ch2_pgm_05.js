@@ -8,8 +8,6 @@ console.log(message);
 message = 'Congratulations! Your tweet has won a prize...';
 console.log(message);
 
-
-
 /* Further Adventures
  *
  * 1) Assign message a third value. Display it on the console.
@@ -25,3 +23,15 @@ console.log(message);
  *    Be careful to use matching speech marks.
  *
  */
+
+// 1) Assign message a third value. Display it on the console.
+message = "Keep up the great work!";
+console.log(message); // Displays: Keep up the great work!
+
+// 2) Split the first message into two pieces, joined by +
+message = "Hello " + "World!";
+console.log(message); // Displays: Hello World!
+
+// 3) Split the second message into three pieces, joined by +
+message = 'Congratulations! ' + 'Your tweet has ' + 'won a prize...';
+console.log(message); // Displays: Congratulations! Your tweet has won a prize...

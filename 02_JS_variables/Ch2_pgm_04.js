@@ -2,12 +2,10 @@
 
 var score;
 score = 100;
-console.log(score);
+console.log(score); // This will display 100
 
-score = 150;
-console.log(score);
-
-
+score = 200; // Changed the value assigned to score
+console.log(score); // This will display 200
 
 /* Further Adventures
  *
@@ -29,3 +27,9 @@ console.log(score);
  *    the new value of your variable.
  *
  */
+
+// Declare a second variable
+var score2;
+
+// Assign a value to the second variable
+score2 = 300;

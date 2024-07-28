@@ -12,30 +12,23 @@ var buildPlanet = function (name, position, type) {
         info += ": planet " + planet.position;
         info += " - " + planet.type;
         console.log(info);
-      };
+    };
 
     return planet;
 };
 
 var planets = [
-    buildPlanet( "Jupiter", 5, "Gas Giant" ),
-    buildPlanet( "Neptune", 8, "Ice Giant" ),
-    buildPlanet( "Mercury", 1, "Terrestrial" )
+    buildPlanet("Jupiter", 5, "Gas Giant"),
+    buildPlanet("Neptune", 8, "Ice Giant"),
+    buildPlanet("Mercury", 1, "Terrestrial"),
+    buildPlanet("Venus", 2, "Terrestrial"), // Adding Venus
+    buildPlanet("Saturn", 6, "Gas Giant")   // Adding Saturn
 ];
 
-planets.forEach(function (planet) {
+planets.forEach(function (planet, index) {
     planet.showPlanet();
+    if (index < planets.length - 1) {
+        console.log("---------------------------"); // Separator
+    }
 });
 
-
-
-/* Further Adventures
- *
- * 1) Add two more planets to the planets array.
- *
- * 2) Run the program to display them.
- *
- * 3) Add code to visually separate each planet
- *    from the next.
- *
- */

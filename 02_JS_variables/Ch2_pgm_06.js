@@ -8,8 +8,6 @@ locationName = "Argentina";
 
 console.log(playerName + " is in " + locationName);
 
-
-
 /* Further Adventures
  *
  * 1) Declare a score variable.
@@ -21,3 +19,12 @@ console.log(playerName + " is in " + locationName);
  *    something like "Lionel Messi has a score of 100"
  *
  */
+
+// 1) Declare a score variable
+var score;
+
+// 2) Assign it a value
+score = 100;
+
+// 3) Display an extra message on the console, combining variables and strings
+console.log(playerName + " has a score of " + score);
